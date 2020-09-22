@@ -9,7 +9,7 @@ Merges with existing strings if the output file already exists.
 ## Install
 Install the package in your project:
 
-`npm install @biesbjerg/ngx-translate-extract --save-dev`
+`npm install @stewieoo/ngx-translate-extract --save-dev`
 
 Add a script to your project's `package.json`:
 ```json
@@ -44,16 +44,16 @@ If you want to use spaces instead, you can do the following:
 
 `ngx-translate-extract --input ./src --output ./src/i18n/en.json --format-indentation '  '`
 
+### Parent file
+
+Use the `--parent` paremeter to define a translation file that comes from another package for example.
+Values found in that parent file will not be written to the output.
+
 ### Marker function
 If you want to extract strings that are not passed directly to `TranslateService`'s `get()`/`instant()`/`stream()` methods, you can wrap them in a marker function to let `ngx-translate-extract` know you want to extract them.
 
 Install marker function:
 `npm install @biesbjerg/ngx-translate-extract-marker`
-
-### Parent file
-
-Use the `--parent` paremeter to define a translation file that comes from another package for example.
-Values found in that parent file will not be written to the output.
 
 ```ts
 import { marker } from '@biesbjerg/ngx-translate-extract-marker';
