@@ -50,6 +50,11 @@ If you want to extract strings that are not passed directly to `TranslateService
 Install marker function:
 `npm install @biesbjerg/ngx-translate-extract-marker`
 
+### Parent file
+
+Use the `--parent` paremeter to define a translation file that comes from another package for example.
+Values found in that parent file will not be written to the output.
+
 ```ts
 import { marker } from '@biesbjerg/ngx-translate-extract-marker';
 
