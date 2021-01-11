@@ -1,3 +1,30 @@
+# Features of this Fork
+
+This fork adds Support for the parsing of [@ngx-meta/core](https://www.npmjs.com/package/@ngx-meta/core) values.
+It takes all properties under `data.meta` and adds the value to the extraction.
+
+Example:
+```typescript
+{
+    path: 'login',
+    component: HomeComponent,
+    runGuardsAndResolvers: 'always',
+    data: {
+      meta: {
+        title: 'meta.login'
+      }
+    }
+  }
+```
+
+It also adds support for `parent` and `ignore` files with the parameters `--parent` and `--ignore` followed by a relative file path.
+
+Example:
+
+`ngx-translate-extract --i ./src --ignore ./src/assets/i18n/ignore.json --output ./src/assets/i18n/en.json`
+
+It will remove all keys found in either the parent or the ignore file from the extracted values.
+
 If this tool saves you time, please consider making a donation towards the continued maintainence and development: https://donate.biesbjerg.com
 
 [![Donate](images/donate-badge.png)](https://donate.biesbjerg.com)

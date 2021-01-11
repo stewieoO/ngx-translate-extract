@@ -48,6 +48,9 @@ export const cli = y
 	.option('parent', {
 		type: 'string'
 	})
+	.option('ignore', {
+		type: 'string'
+	})
 	.coerce('input', (input: string[]) => {
 		const paths = normalizePaths(input, parsed.patterns);
 		return paths;
@@ -124,7 +127,8 @@ export const cli = y
 
 const extractTask = new ExtractTask(cli.input, cli.output, {
 	replace: cli.replace,
-	parent: cli.parent
+	parent: cli.parent,
+	ignore: cli.ignore
 });
 
 // Parsers
