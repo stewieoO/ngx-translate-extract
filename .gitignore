@@ -10,6 +10,7 @@ npm-debug.log*
 dist
 src/**/*.js
 tests/**/*.js
+*.tgz
 
 # Extracted strings
 strings.json
